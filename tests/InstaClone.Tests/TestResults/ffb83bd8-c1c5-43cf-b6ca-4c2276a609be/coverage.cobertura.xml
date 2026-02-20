@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.9915999999999999" branch-rate="0.9444" version="1.9" timestamp="1771581495" lines-covered="477" lines-valid="481" branches-covered="51" branches-valid="54">
+  <sources>
+    <source>/app/backend/</source>
+  </sources>
+  <packages>
+    <package name="InstaClone.Api" line-rate="0.9915999999999999" branch-rate="0.9444" complexity="119">
+      <classes>
+        <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="Program.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
+                <line number="23" hits="4" branch="False" />
+                <line number="24" hits="4" branch="False" />
+                <line number="25" hits="4" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="4" branch="False" />
+                <line number="28" hits="4" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="32" hits="8" branch="False" />
+                <line number="33" hits="4" branch="False" />
+                <line number="36" hits="4" branch="False" />
+                <line number="37" hits="4" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="42" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
+                <line number="48" hits="4" branch="False" />
+                <line number="49" hits="4" branch="False" />
+                <line number="50" hits="4" branch="False" />
+                <line number="53" hits="4" branch="False" />
+                <line number="54" hits="4" branch="False" />
+                <line number="55" hits="4" branch="False" />
+                <line number="56" hits="4" branch="False" />
+                <line number="57" hits="4" branch="False" />
+                <line number="58" hits="4" branch="False" />
+                <line number="59" hits="4" branch="False" />
+                <line number="61" hits="4" branch="False" />
+                <line number="62" hits="4" branch="False" />
+                <line number="65" hits="4" branch="False" />
+                <line number="66" hits="4" branch="False" />
+                <line number="69" hits="4" branch="False" />
+                <line number="70" hits="4" branch="False" />
+                <line number="71" hits="4" branch="False" />
+                <line number="72" hits="4" branch="False" />
+                <line number="74" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="4" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="24" hits="4" branch="False" />
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="4" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="32" hits="8" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="36" hits="4" branch="False" />
+            <line number="37" hits="4" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="42" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
+            <line number="48" hits="4" branch="False" />
+            <line number="49" hits="4" branch="False" />
+            <line number="50" hits="4" branch="False" />
+            <line number="53" hits="4" branch="False" />
+            <line number="54" hits="4" branch="False" />
+            <line number="55" hits="4" branch="False" />
+            <line number="56" hits="4" branch="False" />
+            <line number="57" hits="4" branch="False" />
+            <line number="58" hits="4" branch="False" />
+            <line number="59" hits="4" branch="False" />
+            <line number="61" hits="4" branch="False" />
+            <line number="62" hits="4" branch="False" />
+            <line number="65" hits="4" branch="False" />
+            <line number="66" hits="4" branch="False" />
+            <line number="69" hits="4" branch="False" />
+            <line number="70" hits="4" branch="False" />
+            <line number="71" hits="4" branch="False" />
+            <line number="72" hits="4" branch="False" />
+            <line number="74" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Services.ImageService" filename="Services/ImageService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="False" />
+                <line number="6" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="False" />
+            <line number="6" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Services.ImageService/&lt;SaveImageAsync&gt;d__3" filename="Services/ImageService.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="12" hits="4" branch="False" />
+                <line number="13" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="46" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="1" branch="False" />
+                <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="86" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="1" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="20" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="155" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="31" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="495" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="4" branch="False" />
+            <line number="13" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="46" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="14" hits="1" branch="False" />
+            <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="86" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="17" hits="1" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="20" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="155" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="21" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="31" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="495" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="32" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Services.TokenService" filename="Services/TokenService.cs" line-rate="1" branch-rate="0.5" complexity="3">
+          <methods>
+            <method name="GenerateToken" signature="(System.Guid,System.String)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="11" hits="15" branch="False" />
+                <line number="12" hits="15" branch="False" />
+                <line number="13" hits="15" branch="False" />
+                <line number="14" hits="15" branch="False" />
+                <line number="16" hits="15" branch="False" />
+                <line number="17" hits="15" branch="False" />
+                <line number="18" hits="15" branch="False" />
+                <line number="19" hits="15" branch="False" />
+                <line number="20" hits="15" branch="False" />
+                <line number="22" hits="15" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="153" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="15" branch="False" />
+                <line number="24" hits="15" branch="False" />
+                <line number="25" hits="15" branch="False" />
+                <line number="26" hits="15" branch="False" />
+                <line number="27" hits="15" branch="False" />
+                <line number="28" hits="15" branch="False" />
+                <line number="29" hits="15" branch="False" />
+                <line number="31" hits="15" branch="False" />
+                <line number="32" hits="15" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="8" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="15" branch="False" />
+            <line number="12" hits="15" branch="False" />
+            <line number="13" hits="15" branch="False" />
+            <line number="14" hits="15" branch="False" />
+            <line number="16" hits="15" branch="False" />
+            <line number="17" hits="15" branch="False" />
+            <line number="18" hits="15" branch="False" />
+            <line number="19" hits="15" branch="False" />
+            <line number="20" hits="15" branch="False" />
+            <line number="22" hits="15" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="153" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="23" hits="15" branch="False" />
+            <line number="24" hits="15" branch="False" />
+            <line number="25" hits="15" branch="False" />
+            <line number="26" hits="15" branch="False" />
+            <line number="27" hits="15" branch="False" />
+            <line number="28" hits="15" branch="False" />
+            <line number="29" hits="15" branch="False" />
+            <line number="31" hits="15" branch="False" />
+            <line number="32" hits="15" branch="False" />
+            <line number="8" hits="8" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Models.Comment" filename="Models/Comment.cs" line-rate="1" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Text" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="36" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="157" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="34" branch="False" />
+              </lines>
+            </method>
+            <method name="get_User" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="155" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PostId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="34" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Post" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="155" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="2" branch="False" />
+            <line number="6" hits="36" branch="False" />
+            <line number="7" hits="157" branch="False" />
+            <line number="9" hits="34" branch="False" />
+            <line number="10" hits="155" branch="False" />
+            <line number="12" hits="34" branch="False" />
+            <line number="13" hits="155" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Models.Like" filename="Models/Like.cs" line-rate="0.8332999999999999" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="216" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="47" branch="False" />
+              </lines>
+            </method>
+            <method name="get_User" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="216" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PostId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="47" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Post" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="216" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="216" branch="False" />
+            <line number="8" hits="47" branch="False" />
+            <line number="9" hits="216" branch="False" />
+            <line number="11" hits="47" branch="False" />
+            <line number="12" hits="216" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Models.Post" filename="Models/Post.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="172" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="120" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Caption" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="120" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="241" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="119" branch="False" />
+              </lines>
+            </method>
+            <method name="get_User" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="216" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="216" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Likes" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="216" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="172" branch="False" />
+            <line number="6" hits="120" branch="False" />
+            <line number="7" hits="120" branch="False" />
+            <line number="8" hits="241" branch="False" />
+            <line number="10" hits="119" branch="False" />
+            <line number="11" hits="216" branch="False" />
+            <line number="13" hits="216" branch="False" />
+            <line number="14" hits="216" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Models.User" filename="Models/User.cs" line-rate="1" branch-rate="1" complexity="10">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="122" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Username" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="137" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PasswordHash" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="24" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DisplayName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Bio" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="78" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Posts" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="78" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="78" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Likes" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="78" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="122" branch="False" />
+            <line number="6" hits="137" branch="False" />
+            <line number="7" hits="18" branch="False" />
+            <line number="8" hits="24" branch="False" />
+            <line number="9" hits="18" branch="False" />
+            <line number="10" hits="12" branch="False" />
+            <line number="11" hits="78" branch="False" />
+            <line number="13" hits="78" branch="False" />
+            <line number="14" hits="78" branch="False" />
+            <line number="15" hits="78" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Endpoints.AuthEndpoints" filename="Endpoints/AuthEndpoints.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapAuthEndpoints" signature="(Microsoft.AspNetCore.Builder.WebApplication)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
+                <line number="17" hits="16" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="16" branch="False" />
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="15" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="13" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="4" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="12" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="11" branch="False" />
+                <line number="30" hits="11" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="10" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="9" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="4" branch="False" />
+                <line number="39" hits="8" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="4" branch="False" />
+                <line number="42" hits="7" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="6" branch="False" />
+                <line number="46" hits="6" branch="False" />
+                <line number="47" hits="6" branch="False" />
+                <line number="48" hits="6" branch="False" />
+                <line number="49" hits="6" branch="False" />
+                <line number="50" hits="6" branch="False" />
+                <line number="51" hits="6" branch="False" />
+                <line number="52" hits="4" branch="False" />
+                <line number="53" hits="6" branch="False" />
+                <line number="54" hits="6" branch="False" />
+                <line number="55" hits="4" branch="False" />
+                <line number="56" hits="6" branch="False" />
+                <line number="57" hits="6" branch="False" />
+                <line number="58" hits="20" branch="False" />
+                <line number="60" hits="4" branch="False" />
+                <line number="61" hits="7" branch="False" />
+                <line number="62" hits="7" branch="False" />
+                <line number="63" hits="7" branch="False" />
+                <line number="64" hits="2" branch="False" />
+                <line number="65" hits="4" branch="False" />
+                <line number="66" hits="5" branch="False" />
+                <line number="67" hits="5" branch="False" />
+                <line number="68" hits="11" branch="False" />
+                <line number="69" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
+            <line number="17" hits="16" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="16" branch="False" />
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="15" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="13" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="12" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="11" branch="False" />
+            <line number="30" hits="11" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="10" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="9" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="39" hits="8" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="4" branch="False" />
+            <line number="42" hits="7" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="6" branch="False" />
+            <line number="46" hits="6" branch="False" />
+            <line number="47" hits="6" branch="False" />
+            <line number="48" hits="6" branch="False" />
+            <line number="49" hits="6" branch="False" />
+            <line number="50" hits="6" branch="False" />
+            <line number="51" hits="6" branch="False" />
+            <line number="52" hits="4" branch="False" />
+            <line number="53" hits="6" branch="False" />
+            <line number="54" hits="6" branch="False" />
+            <line number="55" hits="4" branch="False" />
+            <line number="56" hits="6" branch="False" />
+            <line number="57" hits="6" branch="False" />
+            <line number="58" hits="20" branch="False" />
+            <line number="60" hits="4" branch="False" />
+            <line number="61" hits="7" branch="False" />
+            <line number="62" hits="7" branch="False" />
+            <line number="63" hits="7" branch="False" />
+            <line number="64" hits="2" branch="False" />
+            <line number="65" hits="4" branch="False" />
+            <line number="66" hits="5" branch="False" />
+            <line number="67" hits="5" branch="False" />
+            <line number="68" hits="11" branch="False" />
+            <line number="69" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Endpoints.AuthEndpoints/&lt;&gt;c/&lt;&lt;MapAuthEndpoints&gt;b__0_0&gt;d" filename="Endpoints/AuthEndpoints.cs" line-rate="1" branch-rate="1" complexity="22">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.AuthEndpoints/&lt;&gt;c/&lt;&lt;MapAuthEndpoints&gt;b__0_1&gt;d" filename="Endpoints/AuthEndpoints.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.CommentEndpoints" filename="Endpoints/CommentEndpoints.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapCommentEndpoints" signature="(Microsoft.AspNetCore.Builder.WebApplication)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="4" branch="False" />
+                <line number="13" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
+                <line number="17" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="4" branch="False" />
+                <line number="23" hits="3" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="4" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="3" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="42" hits="4" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="4" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="5" branch="False" />
+                <line number="54" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="4" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
+            <line number="17" hits="4" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="4" branch="False" />
+            <line number="23" hits="3" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="3" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="42" hits="4" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="4" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="5" branch="False" />
+            <line number="54" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Endpoints.CommentEndpoints/&lt;&gt;c/&lt;&lt;MapCommentEndpoints&gt;b__0_0&gt;d" filename="Endpoints/CommentEndpoints.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.LikeEndpoints" filename="Endpoints/LikeEndpoints.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapLikeEndpoints" signature="(Microsoft.AspNetCore.Builder.WebApplication)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="4" branch="False" />
+                <line number="12" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="5" branch="False" />
+                <line number="16" hits="5" branch="False" />
+                <line number="17" hits="4" branch="False" />
+                <line number="18" hits="5" branch="False" />
+                <line number="19" hits="1" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="4" branch="False" />
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+                <line number="26" hits="3" branch="False" />
+                <line number="27" hits="3" branch="False" />
+                <line number="28" hits="3" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="3" branch="False" />
+                <line number="31" hits="3" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="3" branch="False" />
+                <line number="34" hits="5" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="37" hits="4" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="41" hits="2" branch="False" />
+                <line number="42" hits="2" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="44" hits="2" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="4" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="4" branch="False" />
+                <line number="53" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="5" branch="False" />
+            <line number="16" hits="5" branch="False" />
+            <line number="17" hits="4" branch="False" />
+            <line number="18" hits="5" branch="False" />
+            <line number="19" hits="1" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="3" branch="False" />
+            <line number="31" hits="3" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="3" branch="False" />
+            <line number="34" hits="5" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="37" hits="4" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="41" hits="2" branch="False" />
+            <line number="42" hits="2" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="44" hits="2" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="4" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="4" branch="False" />
+            <line number="53" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Endpoints.LikeEndpoints/&lt;&gt;c/&lt;&lt;MapLikeEndpoints&gt;b__0_0&gt;d" filename="Endpoints/LikeEndpoints.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.LikeEndpoints/&lt;&gt;c/&lt;&lt;MapLikeEndpoints&gt;b__0_1&gt;d" filename="Endpoints/LikeEndpoints.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.PostEndpoints" filename="Endpoints/PostEndpoints.cs" line-rate="0.9863" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapPostEndpoints" signature="(Microsoft.AspNetCore.Builder.WebApplication)" line-rate="0.9863" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="17" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
+                <line number="23" hits="4" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="4" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
+                <line number="49" hits="4" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="2" branch="False" />
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="False" />
+                <line number="56" hits="4" branch="False" />
+                <line number="57" hits="2" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="4" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+                <line number="64" hits="6" branch="False" />
+                <line number="66" hits="4" branch="False" />
+                <line number="67" hits="17" branch="False" />
+                <line number="68" hits="17" branch="False" />
+                <line number="69" hits="17" branch="False" />
+                <line number="70" hits="4" branch="False" />
+                <line number="71" hits="17" branch="False" />
+                <line number="72" hits="17" branch="False" />
+                <line number="73" hits="17" branch="False" />
+                <line number="74" hits="17" branch="False" />
+                <line number="75" hits="17" branch="False" />
+                <line number="76" hits="17" branch="False" />
+                <line number="77" hits="17" branch="False" />
+                <line number="78" hits="17" branch="False" />
+                <line number="79" hits="4" branch="False" />
+                <line number="80" hits="17" branch="False" />
+                <line number="81" hits="110" branch="False" />
+                <line number="82" hits="110" branch="False" />
+                <line number="83" hits="110" branch="False" />
+                <line number="84" hits="110" branch="False" />
+                <line number="85" hits="110" branch="False" />
+                <line number="86" hits="4" branch="False" />
+                <line number="87" hits="17" branch="False" />
+                <line number="88" hits="21" branch="False" />
+                <line number="89" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="17" hits="4" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="4" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="4" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
+            <line number="49" hits="4" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="False" />
+            <line number="56" hits="4" branch="False" />
+            <line number="57" hits="2" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="4" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="64" hits="6" branch="False" />
+            <line number="66" hits="4" branch="False" />
+            <line number="67" hits="17" branch="False" />
+            <line number="68" hits="17" branch="False" />
+            <line number="69" hits="17" branch="False" />
+            <line number="70" hits="4" branch="False" />
+            <line number="71" hits="17" branch="False" />
+            <line number="72" hits="17" branch="False" />
+            <line number="73" hits="17" branch="False" />
+            <line number="74" hits="17" branch="False" />
+            <line number="75" hits="17" branch="False" />
+            <line number="76" hits="17" branch="False" />
+            <line number="77" hits="17" branch="False" />
+            <line number="78" hits="17" branch="False" />
+            <line number="79" hits="4" branch="False" />
+            <line number="80" hits="17" branch="False" />
+            <line number="81" hits="110" branch="False" />
+            <line number="82" hits="110" branch="False" />
+            <line number="83" hits="110" branch="False" />
+            <line number="84" hits="110" branch="False" />
+            <line number="85" hits="110" branch="False" />
+            <line number="86" hits="4" branch="False" />
+            <line number="87" hits="17" branch="False" />
+            <line number="88" hits="21" branch="False" />
+            <line number="89" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Endpoints.PostEndpoints/&lt;&gt;c/&lt;&lt;MapPostEndpoints&gt;b__0_0&gt;d" filename="Endpoints/PostEndpoints.cs" line-rate="1" branch-rate="0.5" complexity="2">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Endpoints.PostEndpoints/&lt;&gt;c/&lt;&lt;MapPostEndpoints&gt;b__0_1&gt;d" filename="Endpoints/PostEndpoints.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods />
+          <lines />
+        </class>
+        <class name="InstaClone.Api.Dtos.RegisterRequest" filename="Dtos/AuthDtos.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Username" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="165" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="165" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.LoginRequest" filename="Dtos/AuthDtos.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="20" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="20" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.AuthResponse" filename="Dtos/AuthDtos.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Token" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="68" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="68" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.CreateCommentRequest" filename="Dtos/CommentDtos.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Text" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.CommentResponse" filename="Dtos/CommentDtos.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Text" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Username" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.String,System.DateTime,System.Guid,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="9" branch="False" />
+                <line number="11" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="5" branch="False" />
+            <line number="7" hits="6" branch="False" />
+            <line number="8" hits="9" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="10" hits="5" branch="False" />
+            <line number="5" hits="9" branch="False" />
+            <line number="11" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.CreatePostRequest" filename="Dtos/PostDtos.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Caption" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.PostResponse" filename="Dtos/PostDtos.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="106" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="95" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Caption" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="96" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="107" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="95" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Username" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="95" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="96" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LikeCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="96" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.String,System.String,System.DateTime,System.Guid,System.String,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="190" branch="False" />
+                <line number="14" hits="190" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="106" branch="False" />
+            <line number="7" hits="95" branch="False" />
+            <line number="8" hits="96" branch="False" />
+            <line number="9" hits="107" branch="False" />
+            <line number="10" hits="95" branch="False" />
+            <line number="11" hits="95" branch="False" />
+            <line number="12" hits="96" branch="False" />
+            <line number="13" hits="96" branch="False" />
+            <line number="5" hits="190" branch="False" />
+            <line number="14" hits="190" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Dtos.FeedResponse" filename="Dtos/PostDtos.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Posts" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="123" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="123" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Data.AppDbContext" filename="Data/AppDbContext.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Users" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="39" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Posts" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="32" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Likes" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="14" branch="False" />
+              </lines>
+            </method>
+            <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="2" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="56" hits="2" branch="False" />
+                <line number="57" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.EntityFrameworkCore.DbContextOptions`1&lt;InstaClone.Api.Data.AppDbContext&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="58" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="39" branch="False" />
+            <line number="9" hits="32" branch="False" />
+            <line number="10" hits="7" branch="False" />
+            <line number="11" hits="14" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="56" hits="2" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="6" hits="58" branch="False" />
+          </lines>
+        </class>
+        <class name="InstaClone.Api.Data.DbSeeder/&lt;SeedAsync&gt;d__0" filename="Data/DbSeeder.cs" line-rate="0.9887999999999999" branch-rate="0.8332999999999999" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.9887999999999999" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="9" hits="4" branch="False" />
+                <line number="10" hits="4" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="196" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="11" hits="0" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
+                <line number="17" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
+                <line number="23" hits="4" branch="False" />
+                <line number="24" hits="4" branch="False" />
+                <line number="25" hits="4" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="4" branch="False" />
+                <line number="28" hits="4" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="4" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="36" hits="4" branch="False" />
+                <line number="37" hits="4" branch="False" />
+                <line number="39" hits="4" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="56" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="1082" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="24" branch="False" />
+                <line number="49" hits="24" branch="False" />
+                <line number="50" hits="24" branch="False" />
+                <line number="51" hits="24" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="746" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="10" branch="False" />
+                <line number="53" hits="10" branch="False" />
+                <line number="54" hits="10" branch="False" />
+                <line number="55" hits="10" branch="False" />
+                <line number="56" hits="10" branch="False" />
+                <line number="57" hits="10" branch="False" />
+                <line number="58" hits="10" branch="False" />
+                <line number="59" hits="10" branch="False" />
+                <line number="60" hits="10" branch="False" />
+                <line number="61" hits="10" branch="False" />
+                <line number="62" hits="24" branch="False" />
+                <line number="63" hits="24" branch="False" />
+                <line number="66" hits="4" branch="False" />
+                <line number="67" hits="4" branch="False" />
+                <line number="68" hits="4" branch="False" />
+                <line number="69" hits="4" branch="False" />
+                <line number="70" hits="4" branch="False" />
+                <line number="71" hits="4" branch="False" />
+                <line number="72" hits="4" branch="False" />
+                <line number="73" hits="4" branch="False" />
+                <line number="74" hits="4" branch="False" />
+                <line number="76" hits="4" branch="False" />
+                <line number="77" hits="4" branch="False" />
+                <line number="80" hits="4" branch="False" />
+                <line number="81" hits="4" branch="False" />
+                <line number="82" hits="4" branch="False" />
+                <line number="83" hits="4" branch="False" />
+                <line number="84" hits="4" branch="False" />
+                <line number="85" hits="4" branch="False" />
+                <line number="86" hits="4" branch="False" />
+                <line number="87" hits="4" branch="False" />
+                <line number="88" hits="4" branch="False" />
+                <line number="89" hits="4" branch="False" />
+                <line number="90" hits="4" branch="False" />
+                <line number="92" hits="4" branch="False" />
+                <line number="93" hits="4" branch="False" />
+                <line number="96" hits="4" branch="False" />
+                <line number="97" hits="4" branch="False" />
+                <line number="98" hits="4" branch="False" />
+                <line number="99" hits="4" branch="False" />
+                <line number="100" hits="4" branch="False" />
+                <line number="101" hits="4" branch="False" />
+                <line number="102" hits="4" branch="False" />
+                <line number="103" hits="4" branch="False" />
+                <line number="104" hits="4" branch="False" />
+                <line number="105" hits="4" branch="False" />
+                <line number="106" hits="4" branch="False" />
+                <line number="107" hits="4" branch="False" />
+                <line number="108" hits="4" branch="False" />
+                <line number="109" hits="4" branch="False" />
+                <line number="111" hits="4" branch="False" />
+                <line number="112" hits="4" branch="False" />
+                <line number="113" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="4" branch="False" />
+            <line number="10" hits="4" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="196" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="11" hits="0" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
+            <line number="17" hits="4" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="4" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="24" hits="4" branch="False" />
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="4" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="4" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="36" hits="4" branch="False" />
+            <line number="37" hits="4" branch="False" />
+            <line number="39" hits="4" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="56" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="1082" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="48" hits="24" branch="False" />
+            <line number="49" hits="24" branch="False" />
+            <line number="50" hits="24" branch="False" />
+            <line number="51" hits="24" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="746" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="52" hits="10" branch="False" />
+            <line number="53" hits="10" branch="False" />
+            <line number="54" hits="10" branch="False" />
+            <line number="55" hits="10" branch="False" />
+            <line number="56" hits="10" branch="False" />
+            <line number="57" hits="10" branch="False" />
+            <line number="58" hits="10" branch="False" />
+            <line number="59" hits="10" branch="False" />
+            <line number="60" hits="10" branch="False" />
+            <line number="61" hits="10" branch="False" />
+            <line number="62" hits="24" branch="False" />
+            <line number="63" hits="24" branch="False" />
+            <line number="66" hits="4" branch="False" />
+            <line number="67" hits="4" branch="False" />
+            <line number="68" hits="4" branch="False" />
+            <line number="69" hits="4" branch="False" />
+            <line number="70" hits="4" branch="False" />
+            <line number="71" hits="4" branch="False" />
+            <line number="72" hits="4" branch="False" />
+            <line number="73" hits="4" branch="False" />
+            <line number="74" hits="4" branch="False" />
+            <line number="76" hits="4" branch="False" />
+            <line number="77" hits="4" branch="False" />
+            <line number="80" hits="4" branch="False" />
+            <line number="81" hits="4" branch="False" />
+            <line number="82" hits="4" branch="False" />
+            <line number="83" hits="4" branch="False" />
+            <line number="84" hits="4" branch="False" />
+            <line number="85" hits="4" branch="False" />
+            <line number="86" hits="4" branch="False" />
+            <line number="87" hits="4" branch="False" />
+            <line number="88" hits="4" branch="False" />
+            <line number="89" hits="4" branch="False" />
+            <line number="90" hits="4" branch="False" />
+            <line number="92" hits="4" branch="False" />
+            <line number="93" hits="4" branch="False" />
+            <line number="96" hits="4" branch="False" />
+            <line number="97" hits="4" branch="False" />
+            <line number="98" hits="4" branch="False" />
+            <line number="99" hits="4" branch="False" />
+            <line number="100" hits="4" branch="False" />
+            <line number="101" hits="4" branch="False" />
+            <line number="102" hits="4" branch="False" />
+            <line number="103" hits="4" branch="False" />
+            <line number="104" hits="4" branch="False" />
+            <line number="105" hits="4" branch="False" />
+            <line number="106" hits="4" branch="False" />
+            <line number="107" hits="4" branch="False" />
+            <line number="108" hits="4" branch="False" />
+            <line number="109" hits="4" branch="False" />
+            <line number="111" hits="4" branch="False" />
+            <line number="112" hits="4" branch="False" />
+            <line number="113" hits="4" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
