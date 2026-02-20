@@ -6,7 +6,13 @@ public class ImageService
         [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
     private const long MaxFileSize = 10 * 1024 * 1024; // 10MB
-    private const string UploadPath = "/app/uploads";
+
+    private readonly string _uploadPath;
+
+    public ImageService(IConfiguration configuration)
+    {
+        _uploadPath = configuration["Uploads:Path"] ?? "/app/uploads";
+    }
 
     public async Task<(string? fileName, string? error)> SaveImageAsync(IFormFile file)
     {
@@ -20,10 +26,10 @@ public class ImageService
         if (!AllowedExtensions.Contains(extension))
             return (null, $"File type '{extension}' is not allowed. Allowed: {string.Join(", ", AllowedExtensions)}");
 
-        Directory.CreateDirectory(UploadPath);
+        Directory.CreateDirectory(_uploadPath);
 
         var fileName = $"{Guid.NewGuid()}{extension}";
-        var filePath = Path.Combine(UploadPath, fileName);
+        var filePath = Path.Combine(_uploadPath, fileName);
 
         await using var stream = new FileStream(filePath, FileMode.Create);
         await file.CopyToAsync(stream);

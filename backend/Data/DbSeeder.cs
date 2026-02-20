@@ -5,7 +5,7 @@ namespace InstaClone.Api.Data;
 
 public static class DbSeeder
 {
-    public static async Task SeedAsync(AppDbContext db)
+    public static async Task SeedAsync(AppDbContext db, string uploadsPath = "/app/uploads")
     {
         if (await db.Users.AnyAsync())
             return;
@@ -40,7 +40,6 @@ public static class DbSeeder
         await db.SaveChangesAsync();
 
         // --- Generate placeholder images ---
-        var uploadsPath = "/app/uploads";
         Directory.CreateDirectory(uploadsPath);
 
         var imageFiles = new List<string>();

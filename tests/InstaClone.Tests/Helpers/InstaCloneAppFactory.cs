@@ -10,8 +10,14 @@ namespace InstaClone.Tests.Helpers;
 
 public class InstaCloneAppFactory : WebApplicationFactory<Program>
 {
+    private string? _uploadsPath;
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        _uploadsPath = Path.Combine(Path.GetTempPath(), $"instaclone-tests-{Guid.NewGuid()}");
+
+        builder.UseSetting("Uploads:Path", _uploadsPath);
+
         builder.ConfigureServices(services =>
         {
             services.RemoveAll<AppDbContext>();
@@ -24,5 +30,12 @@ public class InstaCloneAppFactory : WebApplicationFactory<Program>
             services.AddDbContext<AppDbContext>(options =>
                 options.UseInMemoryDatabase(dbName));
         });
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+        if (_uploadsPath != null && Directory.Exists(_uploadsPath))
+            Directory.Delete(_uploadsPath, recursive: true);
     }
 }

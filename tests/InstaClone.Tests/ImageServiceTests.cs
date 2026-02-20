@@ -1,11 +1,23 @@
 using InstaClone.Api.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace InstaClone.Tests;
 
 public class ImageServiceTests
 {
-    private readonly ImageService _service = new();
+    private readonly ImageService _service;
+
+    public ImageServiceTests()
+    {
+        var config = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["Uploads:Path"] = Path.Combine(Path.GetTempPath(), "image-service-tests")
+            })
+            .Build();
+        _service = new ImageService(config);
+    }
 
     [Fact]
     public async Task SaveImageAsync_EmptyFile_ReturnsError()

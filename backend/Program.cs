@@ -41,17 +41,18 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+var uploadsPath = app.Configuration["Uploads:Path"] ?? "/app/uploads";
+Directory.CreateDirectory(uploadsPath);
+
 // Auto-create database + seed
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
-    await DbSeeder.SeedAsync(db);
+    await DbSeeder.SeedAsync(db, uploadsPath);
 }
 
 // Static files for uploaded images
-var uploadsPath = "/app/uploads";
-Directory.CreateDirectory(uploadsPath);
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(uploadsPath),
