@@ -1,0 +1,39 @@
+name: Tests & Coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+        working-directory: tests/InstaClone.Tests
+
+      - name: Build
+        run: dotnet build --no-restore
+        working-directory: tests/InstaClone.Tests
+
+      - name: Test with coverage
+        run: dotnet test --no-build --collect:"XPlat Code Coverage" --logger "trx;LogFileName=results.trx"
+        working-directory: tests/InstaClone.Tests
+
+      - name: Coverage report
+        uses: danielpalme/ReportGenerator-GitHub-Action@5
+        with:
+          reports: tests/InstaClone.Tests/TestResults/**/coverage.cobertura.xml
+          targetdir: coverage
+          reporttypes: MarkdownSummaryGithub
+
+      - name: Publish coverage summary
+        run: cat coverage/SummaryGithub.md >> "$GITHUB_STEP_SUMMARY"
