@@ -14,7 +14,7 @@ services:
       - Jwt__Audience=InstaClone
       - Jwt__ExpiryInMinutes=60
     volumes:
-      - ./src/InstaClone.Api:/app/src
+      - ./backend:/app/src
       - ./uploads:/app/uploads
       - api-nuget:/root/.nuget
       - api-bin:/app/src/bin
@@ -43,12 +43,12 @@ services:
 
   web:
     build:
-      context: ./src/web
+      context: ./frontend
       dockerfile: Dockerfile.dev
     ports:
       - "4000:3000"
     volumes:
-      - ./src/web:/app
+      - ./frontend:/app
       - web-node-modules:/app/node_modules
     command: sh -c "npm install && npm run dev"
     depends_on:

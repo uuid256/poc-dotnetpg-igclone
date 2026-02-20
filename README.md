@@ -1,36 +1,36 @@
-# InstaClone API
+# InstaClone
 
-A proof-of-concept Instagram clone built with .NET 9 Minimal APIs, PostgreSQL, and Docker Compose. The goal is a `docker compose up` experience that gives you a fully working API with hot-reload — edit code on your Mac, see changes instantly in the container.
+A proof-of-concept Instagram clone built with .NET 9 Minimal APIs, Vue.js, PostgreSQL, and Docker Compose. The goal is a `docker compose up` experience that gives you a fully working app with hot-reload — edit code on your Mac, see changes instantly in the containers.
 
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Docker Compose                                         │
-│                                                         │
-│  ┌──────────────────────────┐  ┌─────────────────────┐  │
-│  │  api                     │  │  db                  │  │
-│  │  .NET 9 SDK              │  │  PostgreSQL 16       │  │
-│  │                          │  │                      │  │
-│  │  dotnet watch run        │  │  :5432               │  │
-│  │  (hot-reload)            │──│                      │  │
-│  │                          │  │  Volume: pgdata      │  │
-│  │  Source: bind mount      │  └─────────────────────┘  │
-│  │  Uploads: bind mount     │                           │
-│  │  bin/obj: anon volumes   │                           │
-│  └──────────┬───────────────┘                           │
-│             │ :8080                                     │
-└─────────────┼───────────────────────────────────────────┘
-              │
-         http://localhost:8080
-         http://localhost:8080/scalar/v1  (API docs)
+┌──────────────────────────────────────────────────────────────────────┐
+│  Docker Compose                                                      │
+│                                                                      │
+│  ┌─────────────────┐  ┌──────────────────┐  ┌────────────────────┐  │
+│  │  web             │  │  api              │  │  db                │  │
+│  │  Node 22         │  │  .NET 9 SDK       │  │  PostgreSQL 16     │  │
+│  │                  │  │                   │  │                    │  │
+│  │  Vite dev server │  │  dotnet watch run │  │  :5432             │  │
+│  │  (hot-reload)    │─→│  (hot-reload)     │─→│                    │  │
+│  │                  │  │                   │  │  Volume: pgdata    │  │
+│  │  Proxy: /api     │  │  Uploads: bind    │  └────────────────────┘  │
+│  │         /uploads │  │  Source: bind     │                          │
+│  └────────┬─────────┘  └────────┬──────────┘                          │
+│           │ :4000               │ :8080                               │
+└───────────┼─────────────────────┼────────────────────────────────────┘
+            │                     │
+   http://localhost:4000    http://localhost:8080
+   (Frontend)               (API + Scalar docs)
 ```
 
 **Key decisions:**
 
 - **SDK image** (not aspnet runtime) — full build toolchain for `dotnet watch` hot-reload
-- **Polling file watcher** — `DOTNET_USE_POLLING_FILE_WATCHER=true` because inotify doesn't work across Docker bind mounts
-- **Anonymous volumes for bin/obj** — prevents Linux container binaries from conflicting with macOS host
+- **Polling file watcher** — both Vite and `dotnet watch` use polling because inotify doesn't work across Docker bind mounts on macOS
+- **Vite proxy** — the frontend proxies `/api` and `/uploads` to the API container, avoiding CORS configuration
+- **Anonymous volumes for bin/obj/node_modules** — prevents Linux container binaries from conflicting with macOS host
 - **DB healthcheck + depends_on** — API waits for PostgreSQL to be ready before starting
 - **EnsureCreated()** — auto-creates schema on startup (no migrations needed for a POC)
 - **Scalar.AspNetCore** — replaces Swagger UI (.NET 9 dropped Swashbuckle from templates)
@@ -53,7 +53,7 @@ A proof-of-concept Instagram clone built with .NET 9 Minimal APIs, PostgreSQL, a
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-That's it. No .NET SDK, no PostgreSQL, no other tools needed on your machine.
+That's it. No .NET SDK, no Node.js, no PostgreSQL, no other tools needed on your machine.
 
 ## Running
 
@@ -61,16 +61,18 @@ That's it. No .NET SDK, no PostgreSQL, no other tools needed on your machine.
 docker compose up
 ```
 
-First run pulls images and restores NuGet packages (~1-2 min). Subsequent starts are fast.
+First run pulls images and installs dependencies (~2-3 min). Subsequent starts are fast.
 
-Once you see this in the logs, the API is ready:
+Once you see these in the logs, the app is ready:
 
 ```
 api-1  | Now listening on: http://[::]:8080
+web-1  | VITE v6.x.x  ready in xxx ms
 ```
 
 **Access points:**
 
+- Frontend: http://localhost:4000
 - API: http://localhost:8080
 - Scalar API docs: http://localhost:8080/scalar/v1
 
@@ -82,6 +84,27 @@ docker compose logs -f   # tail logs
 docker compose down      # stop (data persists)
 docker compose down -v   # stop and wipe everything (fresh start)
 ```
+
+## Frontend
+
+The frontend is a Vue 3 single-page application with Tailwind CSS v4.
+
+**Pages:**
+
+| Route | Description |
+|-------|-------------|
+| `/` | Feed — scrollable posts with Load More pagination |
+| `/login` | Log in with email and password |
+| `/register` | Create a new account |
+| `/posts/create` | Upload an image with a caption (requires login) |
+| `/posts/:id` | Post detail with comments, like/unlike |
+
+**Stack:** Vue 3 (Composition API + `<script setup>`), Vue Router, Vite, Tailwind CSS v4
+
+**How it works:**
+- JWT token stored in localStorage, attached to API requests automatically
+- Vite dev server proxies `/api` and `/uploads` to the backend — the browser only talks to one origin
+- No state management library — a simple reactive composable (`useAuth`) shares auth state across components
 
 ## Seed Data
 
@@ -149,12 +172,10 @@ curl -s http://localhost:8080/api/posts/{post-id} | python3 -m json.tool
 ### 4. Create a Post
 
 ```bash
-# Create a test image (1x1 PNG)
-printf '\x89PNG\r\n\x1a\n' > /tmp/test.png
-
-curl -s -X POST "http://localhost:8080/api/posts?caption=Hello+from+curl" \
+curl -s -X POST http://localhost:8080/api/posts \
   -H "Authorization: Bearer $TOKEN" \
-  -F "image=@/tmp/test.png" | python3 -m json.tool
+  -F "image=@test-data/photos/1.jpg" \
+  -F "caption=Hello from curl" | python3 -m json.tool
 ```
 
 ### 5. Add a Comment
@@ -195,12 +216,14 @@ curl -s -X POST http://localhost:8080/api/auth/register \
 
 ## Hot-Reload
 
-Edit any `.cs` file under `src/InstaClone.Api/` on your host machine. The container detects the change via polling and automatically rebuilds and restarts the API. You'll see this in the logs:
+**Backend:** Edit any `.cs` file under `backend/` on your host machine. The container detects the change via polling and automatically rebuilds and restarts the API.
 
 ```
 api-1  | dotnet watch ⌚ File changed: /app/src/...
 api-1  | dotnet watch 🔥 Hot reload of changes succeeded.
 ```
+
+**Frontend:** Edit any `.vue`, `.js`, or `.css` file under `frontend/`. Vite's HMR updates the browser instantly without a full page reload.
 
 ## Project Structure
 
@@ -208,23 +231,46 @@ api-1  | dotnet watch 🔥 Hot reload of changes succeeded.
 poc-dotnet/
 ├── docker-compose.yml
 ├── uploads/                        # Bind-mounted image storage
-└── src/InstaClone.Api/
-    ├── InstaClone.Api.csproj
-    ├── Program.cs                  # App setup, middleware, endpoint registration
-    ├── appsettings.json
-    ├── Data/
-    │   ├── AppDbContext.cs          # EF Core context + model config
-    │   └── DbSeeder.cs             # Seed data (3 users, 6 posts, comments, likes)
-    ├── Models/
-    │   ├── User.cs, Post.cs, Comment.cs, Like.cs
-    ├── Dtos/
-    │   ├── AuthDtos.cs, PostDtos.cs, CommentDtos.cs
-    ├── Services/
-    │   ├── TokenService.cs          # JWT generation (HS256)
-    │   └── ImageService.cs          # File upload validation + storage
-    └── Endpoints/
-        ├── AuthEndpoints.cs         # Register, Login
-        ├── PostEndpoints.cs         # Create, Get, Feed
-        ├── CommentEndpoints.cs      # Add, List
-        └── LikeEndpoints.cs         # Like, Unlike
+├── backend/                        # .NET 9 Minimal API
+│   ├── InstaClone.Api.csproj
+│   ├── Program.cs                  # App setup, middleware, endpoint registration
+│   ├── appsettings.json
+│   ├── Data/
+│   │   ├── AppDbContext.cs          # EF Core context + model config
+│   │   └── DbSeeder.cs             # Seed data (3 users, 6 posts, comments, likes)
+│   ├── Models/
+│   │   └── User.cs, Post.cs, Comment.cs, Like.cs
+│   ├── Dtos/
+│   │   └── AuthDtos.cs, PostDtos.cs, CommentDtos.cs
+│   ├── Services/
+│   │   ├── TokenService.cs          # JWT generation (HS256)
+│   │   └── ImageService.cs          # File upload validation + storage
+│   └── Endpoints/
+│       ├── AuthEndpoints.cs         # Register, Login
+│       ├── PostEndpoints.cs         # Create, Get, Feed
+│       ├── CommentEndpoints.cs      # Add, List
+│       └── LikeEndpoints.cs         # Like, Unlike
+└── frontend/                        # Vue.js SPA
+    ├── Dockerfile.dev
+    ├── package.json
+    ├── vite.config.js               # Dev server + API proxy config
+    ├── index.html
+    └── src/
+        ├── main.js
+        ├── App.vue
+        ├── router.js
+        ├── style.css                # Tailwind CSS v4 entry point
+        ├── composables/
+        │   ├── useAuth.js           # Reactive auth state (token, user)
+        │   └── useApi.js            # Fetch wrapper with JWT + FormData
+        ├── views/
+        │   ├── FeedView.vue         # Post feed with Load More
+        │   ├── LoginView.vue        # Login form
+        │   ├── RegisterView.vue     # Registration form
+        │   ├── CreatePostView.vue   # Image upload + caption
+        │   └── PostDetailView.vue   # Single post, comments, likes
+        └── components/
+            ├── NavBar.vue           # Top nav with auth controls
+            ├── PostCard.vue         # Post card for feed
+            └── CommentList.vue      # Comment list
 ```
