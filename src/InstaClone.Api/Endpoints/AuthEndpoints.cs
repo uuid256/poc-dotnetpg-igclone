@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using InstaClone.Api.Data;
 using InstaClone.Api.Dtos;
 using InstaClone.Api.Models;
@@ -14,6 +15,27 @@ public static class AuthEndpoints
 
         group.MapPost("/register", async (RegisterRequest request, AppDbContext db, TokenService tokenService) =>
         {
+            // Username validation
+            if (string.IsNullOrWhiteSpace(request.Username))
+                return Results.BadRequest(new { error = "Username is required." });
+            if (request.Username.Length < 3 || request.Username.Length > 30)
+                return Results.BadRequest(new { error = "Username must be between 3 and 30 characters." });
+            if (!Regex.IsMatch(request.Username, @"^[a-zA-Z0-9_]+$"))
+                return Results.BadRequest(new { error = "Username can only contain letters, numbers, and underscores." });
+
+            // Email validation
+            if (string.IsNullOrWhiteSpace(request.Email))
+                return Results.BadRequest(new { error = "Email is required." });
+            var atIndex = request.Email.IndexOf('@');
+            if (atIndex < 1 || request.Email.IndexOf('.', atIndex) < 0)
+                return Results.BadRequest(new { error = "Email is not valid." });
+
+            // Password validation
+            if (string.IsNullOrEmpty(request.Password))
+                return Results.BadRequest(new { error = "Password is required." });
+            if (request.Password.Length < 6)
+                return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+
             if (await db.Users.AnyAsync(u => u.Email == request.Email))
                 return Results.Conflict(new { error = "Email already registered." });
 
