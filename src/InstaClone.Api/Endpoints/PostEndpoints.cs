@@ -3,6 +3,7 @@ using InstaClone.Api.Data;
 using InstaClone.Api.Dtos;
 using InstaClone.Api.Models;
 using InstaClone.Api.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace InstaClone.Api.Endpoints;
@@ -15,7 +16,7 @@ public static class PostEndpoints
 
         group.MapPost("/", async (
             IFormFile image,
-            string? caption,
+            [FromForm] string? caption,
             ClaimsPrincipal claims,
             AppDbContext db,
             ImageService imageService,
