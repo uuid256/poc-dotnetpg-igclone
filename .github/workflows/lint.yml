@@ -24,7 +24,7 @@ jobs:
         working-directory: backend
       - name: Upload reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: backend-lint-report
           path: |
@@ -58,7 +58,7 @@ jobs:
         working-directory: frontend
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: frontend-lint-report
           path: frontend/eslint-report.json
