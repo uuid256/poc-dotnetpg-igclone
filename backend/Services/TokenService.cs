@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -24,7 +25,7 @@ public class TokenService(IConfiguration configuration)
             audience: configuration["Jwt:Audience"],
             claims: claims,
             expires: DateTime.UtcNow.AddMinutes(
-                double.Parse(configuration["Jwt:ExpiryInMinutes"] ?? "60")),
+                double.Parse(configuration["Jwt:ExpiryInMinutes"] ?? "60", CultureInfo.InvariantCulture)),
             signingCredentials: credentials
         );
 
