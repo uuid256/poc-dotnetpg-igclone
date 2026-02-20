@@ -41,11 +41,12 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Auto-create database
+// Auto-create database + seed
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
+    await DbSeeder.SeedAsync(db);
 }
 
 // Static files for uploaded images
