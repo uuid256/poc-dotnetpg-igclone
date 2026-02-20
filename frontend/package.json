@@ -4,16 +4,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint src",
+    "lint:report": "eslint src --format json --output-file eslint-report.json"
   },
   "dependencies": {
     "vue": "^3.5",
     "vue-router": "^4.5"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0",
     "@vitejs/plugin-vue": "^5.2",
-    "vite": "^6.1",
+    "eslint": "^9.20",
+    "eslint-plugin-sonarjs": "^3.0",
+    "eslint-plugin-vue": "^9.32",
     "tailwindcss": "^4.0",
-    "@tailwindcss/vite": "^4.0"
+    "ts-api-utils": "^2.4.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.1"
   }
 }

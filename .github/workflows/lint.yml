@@ -1,0 +1,77 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '9.0.x'
+      - name: Restore
+        run: dotnet restore
+        working-directory: backend
+      - name: Build with analyzers
+        run: dotnet build --no-restore -warnaserror > build-report.txt 2>&1 || true
+        working-directory: backend
+      - name: Format check
+        run: dotnet format --no-restore --verify-no-changes --report format-report/ > format-output.txt 2>&1 || true
+        working-directory: backend
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-lint-report
+          path: |
+            backend/build-report.txt
+            backend/format-report/
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Backend Code Quality" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Build Analyzer Warnings" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          grep -E "warning [A-Z]{2,}" backend/build-report.txt | head -50 >> "$GITHUB_STEP_SUMMARY" || echo "No warnings" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "### Format Check" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat backend/format-output.txt | head -50 >> "$GITHUB_STEP_SUMMARY" || echo "No issues" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+  lint-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm ci
+        working-directory: frontend
+      - name: Lint with report
+        run: npx eslint src --format json --output-file eslint-report.json || true
+        working-directory: frontend
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-lint-report
+          path: frontend/eslint-report.json
+      - name: Summary
+        if: always()
+        working-directory: frontend
+        run: |
+          echo "## Frontend Code Quality (ESLint + SonarJS)" >> "$GITHUB_STEP_SUMMARY"
+          ERRORS=$(jq '[.[].errorCount] | add // 0' eslint-report.json)
+          WARNINGS=$(jq '[.[].warningCount] | add // 0' eslint-report.json)
+          echo "**Errors:** $ERRORS | **Warnings:** $WARNINGS" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Details" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          jq -r '.[] | select(.errorCount > 0 or .warningCount > 0) | "\(.filePath):\n  Errors: \(.errorCount), Warnings: \(.warningCount)\n  \(.messages[] | "  L\(.line): [\(.ruleId)] \(.message)")"' eslint-report.json >> "$GITHUB_STEP_SUMMARY" || echo "No issues" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
