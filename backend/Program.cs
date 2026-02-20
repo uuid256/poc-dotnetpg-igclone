@@ -72,3 +72,6 @@ app.MapCommentEndpoints();
 app.MapLikeEndpoints();
 
 app.Run();
+
+// Make Program class public for WebApplicationFactory in tests
+public partial class Program { }

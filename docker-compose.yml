@@ -54,9 +54,21 @@ services:
     depends_on:
       - api
 
+  tests:
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    volumes:
+      - ./backend:/app/backend
+      - ./tests:/app/tests
+      - test-nuget:/root/.nuget
+    working_dir: /app/tests/InstaClone.Tests
+    command: dotnet test --logger "console;verbosity=detailed"
+    profiles:
+      - test
+
 volumes:
   pgdata:
   api-nuget:
   api-bin:
   api-obj:
   web-node-modules:
+  test-nuget:
