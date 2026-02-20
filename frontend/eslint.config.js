@@ -4,7 +4,7 @@ import sonarjs from 'eslint-plugin-sonarjs'
 
 export default [
   js.configs.recommended,
-  ...pluginVue.configs['flat/recommended'],
+  ...pluginVue.configs['flat/essential'],
   sonarjs.configs.recommended,
   {
     files: ['src/**/*.{js,vue}'],
