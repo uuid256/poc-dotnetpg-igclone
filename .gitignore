@@ -1,0 +1,46 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Docker
+docker-compose.override.yml
+
+## Uploads (keep directory, ignore contents)
+uploads/*
+!uploads/.gitkeep
+
+## Environment
+.env
+*.env.local
+
+## Implementation plan
+IMPLEMENTATION_PLAN.md
